@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #ededed;
+}
+
+.header-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* background-image: linear-gradient(to bottom right, #ffe74c, #ff5964); */
+
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+
+  margin-bottom: 40px;
+
+  position: sticky;
+  top: 0;
+}
+
+.header-main h1 {
+  color: #fff;
+  font-size: 32px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main .cat-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.main .button-cat {
+  margin: 50px 0px;
+  font-size: 17px;
+  line-height: 1.47059;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+  font-family: SF Pro Text, SF Pro Icons, AOS Icons, Helvetica Neue, Helvetica,
+    Arial, sans-serif;
+  background-color: #0070c9;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#42a1ec),
+    to(#0070c9)
+  );
+  background: linear-gradient(#42a1ec, #0070c9);
+  border: 1px solid #07c;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  min-width: 30px;
+  padding: 4px 15px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.main .button-cat:hover {
+  background-color: rgb(0, 109, 199, 0.5);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+  display: none;
+  border: 11px solid rgba(0, 0, 0, 0.1);
+  border-left-color: rgba(0, 0, 0, 0.9);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 1s linear infinite;
+  margin-top: 200px;
+}
+
+@media screen and (max-width: 768px) {
+  .cat-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+}
